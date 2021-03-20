@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="visVarer.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <h2>Varer</h2>
+        <div class="col-md-4">
+                <select class="form-select" id="velgVareType" onchange="typeSorterValgt(this.value)">
+                </select>
+        </div>
+        <div class="col-md-4">
+                <select class="form-select" id="velgSortering" onchange="sorterValgt(this.value)">
+                    <option selected value="empty">Sorter etter</option>
+                </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-15">
+
+            <table id="vareSortement" class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th scope="col">Løpenr</th>
+                    <th scope="col">Antall</th>
+                    <th scope="col">Navn</th>
+                    <th scope="col">Vekt</th>
+                    <th scope="col">Pris</th>
+                    <th scope="col">Antall ben</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button class="btn btn-danger" id="slettVarer" style="margin-top: 10px">Slett alle varer</button>
+        </div>
+    </div>
+    <a class="btn btn-dark" href="index.html" role="button">Tilbake</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="leggTilVare.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Legg til varer</h2>
+            <form class="form" id="vareSkjema">
+                <div class="form-group">
+                    <select class="form-select" id="velgVareType" onchange="typeValgt(this.value)">
+                        <option selected value="empty">Velg type</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+    <a class="btn btn-dark" href="index.html" role="button">Tilbake</a>
+</div>
+
+
+</body>
+</html>
