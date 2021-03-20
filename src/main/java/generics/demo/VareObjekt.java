@@ -62,13 +62,5 @@ public class VareObjekt {
         this.vekt = vekt;
     }
 
-    public void skrivUt() {
-        System.out.println(navn);
-        System.out.println(antall);
-        System.out.println(pris);
-        System.out.println(vekt);
-        System.out.println(type);
-        if(type.equals("Bord"))
-            System.out.println(antallBen);
-    }
+
 }

@@ -78,6 +78,7 @@ const leggTilVare = () =>{
 
 const vareLagtTil = () =>{
     fjernValg()
+    typeValgt($("#velgVareType").val())
 }
 
 const fjernValg = () => {

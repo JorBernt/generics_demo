@@ -1,11 +1,12 @@
 package generics.demo;
 
 public class Sort {
-    String type, sortType;
+    String type, sortType, rekkefolge;
 
-    public Sort(String type, String sortType) {
+    public Sort(String type, String sortTypel, String rekkefolge) {
         this.type = type;
         this.sortType = sortType;
+        this.rekkefolge = rekkefolge;
     }
 
     public String getType() {
@@ -22,5 +23,13 @@ public class Sort {
 
     public void setSortType(String sortType) {
         this.sortType = sortType;
+    }
+
+    public String getRekkefolge() {
+        return rekkefolge;
+    }
+
+    public void setRekkefolge(String rekkefolge) {
+        this.rekkefolge = rekkefolge;
     }
 }

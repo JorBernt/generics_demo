@@ -2,7 +2,8 @@ $(() => {
     hentSortering();
     const type = {
         type : "Alle",
-        sortType : "None"
+        sortType : "None",
+        rekkefolge : "asc"
     }
     hentVarer(type);
 })
@@ -48,7 +49,8 @@ const formaterData = varer => {
 const typeSorterValgt = typeSort => {
     const type = {
         type : typeSort,
-        sortType : "None"
+        sortType : "None",
+        rekkefolge : "asc"
     }
     hentVarer(type)
 }
@@ -56,7 +58,26 @@ const typeSorterValgt = typeSort => {
 const sorterValgt = typeSort => {
     const type = {
         type : $("#velgVareType").val(),
-        sortType : typeSort
+        sortType : typeSort,
+        rekkefolge : "asc"
     }
     hentVarer(type)
 }
+
+const rekkeFolge = rekke => {
+    const type = {
+        type : $("#velgVareType").val(),
+        sortType : $("#velgSortering").val(),
+        rekkefolge : rekke
+    }
+    hentVarer(type)
+}
+
+$("#slettVarer").click(()=>{
+    $.ajax({
+        url:"/slettVarer",
+        type:"DELETE",
+        success:() => $("#vareSortement").find("tr:gt(0)").remove()
+    })
+
+})

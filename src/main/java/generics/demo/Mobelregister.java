@@ -41,14 +41,16 @@ public class Mobelregister<E extends Mobel> {
         }
     }
 
+    public void slettAlle() {
+        register.clear();
+    }
+
     public List<E> hentListe() {
         return register;
     }
 
     public List<E> lagListe(String type, List<E> regList) {
-        System.out.println(type);
         if(type.equals("Alle")) {
-            System.out.println(regList.size());
             regList.sort(comp);
             return regList;
         }

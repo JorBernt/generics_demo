@@ -52,6 +52,10 @@ public class AppRepository {
         }
     }
 
+    public void slettVarer() {
+        mobelRegister.slettAlle();
+    }
+
     public List<Mobel> getVarer(Sort sort) {
         switch (sort.sortType) {
             case "None" : {
@@ -59,26 +63,26 @@ public class AppRepository {
                 return mr.lagListe(sort.type, mobelRegister.hentListe());
             }
             case "Navn" : {
-                Mobelregister<Mobel> mr = new Mobelregister<>(new NavnComp());
+                Mobelregister<Mobel> mr = new Mobelregister<>(new NavnComp(sort.rekkefolge));
                 return mr.lagListe(sort.type, mobelRegister.hentListe());
             }
             case "Antall" : {
-                Mobelregister<Mobel> mr = new Mobelregister<>(new AntallComp());
+                Mobelregister<Mobel> mr = new Mobelregister<>(new AntallComp(sort.rekkefolge));
                 return mr.lagListe(sort.type, mobelRegister.hentListe());
             }
-            case "AntallBen" : {
+            case "Antall ben" : {
                 Mobelregister<Mobel> mr = new Mobelregister<>(new AntallBenComp());
                 return mr.lagListe(sort.type, mobelRegister.hentListe());
             }
             case "Pris" : {
-                Mobelregister<Mobel> mr = new Mobelregister<>(new PrisComp());
+                Mobelregister<Mobel> mr = new Mobelregister<>(new PrisComp(sort.rekkefolge));
                 return mr.lagListe(sort.type, mobelRegister.hentListe());
             }
             case "Vekt" : {
-                Mobelregister<Mobel> mr = new Mobelregister<>(new VektComp());
+                Mobelregister<Mobel> mr = new Mobelregister<>(new VektComp(sort.rekkefolge));
                 return mr.lagListe(sort.type, mobelRegister.hentListe());
             }
+            default: return null;
         }
-        return null;
     }
 }

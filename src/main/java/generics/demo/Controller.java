@@ -1,6 +1,7 @@
 package generics.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,6 +33,11 @@ public class Controller {
     @PostMapping("/hentVarer")
     public List<Mobel> hentVarer(Sort sort) {
         return repo.getVarer(sort);
+    }
+
+    @DeleteMapping("/slettVarer")
+    public void slettVarer() {
+        repo.slettVarer();
     }
 
 }

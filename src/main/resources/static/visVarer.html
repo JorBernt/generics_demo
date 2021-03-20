@@ -2,7 +2,6 @@
 <html lang="en">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="visVarer.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -19,8 +18,13 @@
         </div>
         <div class="col-md-4">
                 <select class="form-select" id="velgSortering" onchange="sorterValgt(this.value)">
-                    <option selected value="empty">Sorter etter</option>
                 </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-select" id="velRekkefolge" onchange="rekkeFolge(this.value)">
+                <option value="asc">Stigende</option>
+                <option value="desc">Synkende</option>
+            </select>
         </div>
     </div>
     <div class="row">
@@ -46,4 +50,6 @@
 </div>
 
 </body>
+<script src="visVarer.js"></script>
+
 </html>
