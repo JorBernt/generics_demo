@@ -1,5 +1,6 @@
 package generics.demo;
 
+import generics.demo.comp.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -59,6 +60,22 @@ public class AppRepository {
             }
             case "Navn" : {
                 Mobelregister<Mobel> mr = new Mobelregister<>(new NavnComp());
+                return mr.lagListe(sort.type, mobelRegister.hentListe());
+            }
+            case "Antall" : {
+                Mobelregister<Mobel> mr = new Mobelregister<>(new AntallComp());
+                return mr.lagListe(sort.type, mobelRegister.hentListe());
+            }
+            case "AntallBen" : {
+                Mobelregister<Mobel> mr = new Mobelregister<>(new AntallBenComp());
+                return mr.lagListe(sort.type, mobelRegister.hentListe());
+            }
+            case "Pris" : {
+                Mobelregister<Mobel> mr = new Mobelregister<>(new PrisComp());
+                return mr.lagListe(sort.type, mobelRegister.hentListe());
+            }
+            case "Vekt" : {
+                Mobelregister<Mobel> mr = new Mobelregister<>(new VektComp());
                 return mr.lagListe(sort.type, mobelRegister.hentListe());
             }
         }

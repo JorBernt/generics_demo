@@ -55,6 +55,7 @@ const leggTilVare = () =>{
             vare = {
             navn: $("#vareNavn").val(),
             antall: $("#antallVarer").val(),
+            pris: $("#varePris").val(),
             vekt: $("#vareVekt").val(),
             antallBen: 0,
             type: $("#velgVareType").val()

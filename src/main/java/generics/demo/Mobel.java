@@ -2,10 +2,10 @@ package generics.demo;
 
 public abstract class Mobel implements Comparable<Mobel>{
     private String navn;
-    private Double vekt, pris;
+    private double vekt, pris;
     private int lopeNr, antall;
 
-    public Mobel(String navn, int antall, Double vekt, Double pris, int lopeNr) {
+    public Mobel(String navn, int antall, double vekt, double pris, int lopeNr) {
         this.navn = navn;
         this.antall = antall;
         this.vekt = vekt;
@@ -36,19 +36,19 @@ public abstract class Mobel implements Comparable<Mobel>{
         this.antall = antall;
     }
 
-    public Double getVekt() {
+    public double getVekt() {
         return vekt;
     }
 
-    public void setVekt(Double vekt) {
+    public void setVekt(double vekt) {
         this.vekt = vekt;
     }
 
-    public Double getPris() {
+    public double getPris() {
         return pris;
     }
 
-    public void setPris(Double pris) {
+    public void setPris(double pris) {
         this.pris = pris;
     }
 

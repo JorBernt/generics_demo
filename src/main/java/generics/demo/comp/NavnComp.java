@@ -1,4 +1,6 @@
-package generics.demo;
+package generics.demo.comp;
+
+import generics.demo.Mobel;
 
 import java.util.Comparator;
 

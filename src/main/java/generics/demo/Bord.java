@@ -3,7 +3,7 @@ package generics.demo;
 public class Bord extends Mobel {
     private int antallBen;
 
-    public Bord(String navn, int antall, Double vekt, Double pris, int lopeNr, int antallBen) {
+    public Bord(String navn, int antall, double vekt, double pris, int lopeNr, int antallBen) {
         super(navn, antall, vekt, pris, lopeNr);
         this.antallBen = antallBen;
     }

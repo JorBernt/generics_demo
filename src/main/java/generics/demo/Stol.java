@@ -1,7 +1,7 @@
 package generics.demo;
 
 public class Stol extends Mobel {
-    public Stol(String navn, int antall, Double vekt, Double pris, int lopeNr) {
+    public Stol(String navn, int antall, double vekt, double pris, int lopeNr) {
         super(navn, antall, vekt, pris, lopeNr);
     }
     @Override
