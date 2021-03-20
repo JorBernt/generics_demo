@@ -25,7 +25,7 @@ public class AppRepository {
         sortering.add("Navn");
         sortering.add("Antall");
         sortering.add("Pris");
-        sortering.add("Antall ben");
+        //sortering.add("Antall ben");
         sortering.add("Vekt");
     }
 
