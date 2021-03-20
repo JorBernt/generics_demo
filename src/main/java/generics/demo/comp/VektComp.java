@@ -13,8 +13,8 @@ public class VektComp implements Comparator<Mobel> {
     @Override
     public int compare(Mobel m1, Mobel m2) {
         if(rekkefolge.equals("asc"))
-            return Double.compare(m1.getPris(), m2.getPris());
+            return Double.compare(m1.getVekt(), m2.getVekt());
         else
-            return Double.compare(m2.getPris(), m1.getPris());
+            return Double.compare(m2.getVekt(), m1.getVekt());
     }
 }
